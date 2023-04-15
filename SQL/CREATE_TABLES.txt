@@ -9,3 +9,23 @@ CREATE TABLE test_portfolio_history (
                     DATE DATE NOT NULL DEFAULT CURRENT_DATE,
                     UPDATED VARCHAR(255) NOT NULL DEFAULT 'NO'
             )
+
+
+
+CREATE TABLE ucts_trade_history_portfolio (
+        STRATEGY VARCHAR(255) NOT NULL,
+        ORDERID VARCHAR(255) NOT NULL,
+        TRADE_DATE DATE NOT NULL DEFAULT CURRENT_DATE,
+        SYMBOL VARCHAR(255) NOT NULL,
+        SIDE VARCHAR(255) NOT NULL,                
+        PRICE FLOAT NOT NULL,
+        QTY FLOAT NOT NULL,
+        USDT_VALUE FLOAT NOT NULL,
+        COMMISSION_ASSET VARCHAR(255) NOT NULL,
+        COMMISSION FLOAT NOT NULL
+)
+
+CREATE TABLE ucts_portfolio_balance_history (
+        TRADE_DATE DATE NOT NULL DEFAULT CURRENT_DATE,
+        USDT_VALUE FLOAT NOT NULL
+)
